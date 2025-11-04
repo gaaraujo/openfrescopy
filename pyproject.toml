@@ -9,7 +9,7 @@ version = "0.1.0"
 description = "Python wrapper for OpenFresco hybrid simulation framework"
 readme = "README.md"
 requires-python = ">=3.10"
-license = {text = "Proprietary - See COPYRIGHT_UCB"}
+license = {text = "Proprietary - See LICENSE"}
 authors = [
     {name = "Andreas Schellenberg", email = "andreas.schellenberg@gmx.net"},
     {name = "Yoshikazu Takahashi", email = "yos@catfish.dpri.kyoto-u.ac.jp"},

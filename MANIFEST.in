@@ -9,7 +9,6 @@ recursive-include examples *.txt
 # Include documentation
 include README.md
 include LICENSE
-include COPYRIGHT_UCB
 
 # Exclude build-time files (these should not be in wheels)
 global-exclude setup.py

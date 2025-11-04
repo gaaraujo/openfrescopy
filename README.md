@@ -7,17 +7,35 @@ geotechnical systems.
 
 ## Installation
 
-Install from source:
+### Requirements
 
-```bash
-pip install .
-```
+- Python 3.10, 3.11, 3.12, 3.13, or 3.14 (64-bit)
+- Windows (64-bit)
+- pip (usually comes with Python)
 
-Or for development mode:
+### Installing from Wheel
 
-```bash
-pip install -e .
-```
+Wheels are available in the `dist/` folder for Python 3.10-3.14. Install the appropriate wheel for your Python version:
+
+1. **Find the wheel file** matching your Python version:
+   - `dist/openfrescopy-0.1.0-cp310-cp310-win_amd64.whl` (Python 3.10)
+   - `dist/openfrescopy-0.1.0-cp311-cp311-win_amd64.whl` (Python 3.11)
+   - `dist/openfrescopy-0.1.0-cp312-cp312-win_amd64.whl` (Python 3.12)
+   - `dist/openfrescopy-0.1.0-cp313-cp313-win_amd64.whl` (Python 3.13)
+   - `dist/openfrescopy-0.1.0-cp314-cp314-win_amd64.whl` (Python 3.14)
+
+2. **Install using pip:**
+   ```bash
+   pip install dist/openfrescopy-0.1.0-cp31x-cp31x-win_amd64.whl
+   ```
+   (Replace `x` with your Python minor version, e.g., `cp311` for Python 3.11)
+
+3. **Verify installation:**
+   ```bash
+   python -c "import openfrescopy; print('Installation successful!')"
+   ```
+
+For information about building from source or understanding the build process, see `BUILD_GUIDE.md`.
 
 ## Usage
 
@@ -29,7 +47,7 @@ OpenFrescoPy can be used as a standalone module with any finite element code:
 import openfrescopy as opf
 
 # Use OpenFrescoPy functions directly
-# (function names depend on the API exposed by _openfrescopy.pyd)
+# (function names depend on the API exposed by OpenFrescoPy.pyd)
 ```
 
 ### OpenSees Integration
@@ -57,7 +75,7 @@ The DLL path is automatically configured when importing
 - Windows (compiled extensions are Windows-specific)
 - OpenSeesPy (for OpenSees integration)
 
-**Note:** The package automatically detects your Python version and loads the appropriate compiled binaries. Ensure you have binaries compiled for your Python version (see `BUILD_GUIDE.md` for build instructions).
+**Note:** Use the wheel matching your Python version when installing. The package includes pre-built binaries for all supported Python versions.
 
 ## Examples
 
@@ -92,13 +110,16 @@ print("Has expElement:", hasattr(ops, 'expElement'))
 
 ## License
 
-Copyright (c) 2006, The Regents of the University of California.
-All Rights Reserved.
+Copyright © 2006. The Regents of the University of California (Regents).  
+Copyright © 2006, Yoshikazu Takahashi, Kyoto University.
 
-Commercial use of this program without express permission of the University of
-California, Berkeley, is strictly prohibited. See file 'COPYRIGHT_UCB' in main
-directory for information on usage and redistribution, and for a DISCLAIMER OF
-ALL WARRANTIES.
+This software is licensed for educational, research, and not-for-profit purposes under
+the UC Berkeley license. For commercial licensing opportunities, contact The Office of
+Technology Licensing, UC Berkeley, 2150 Shattuck Avenue, Suite 510, Berkeley, CA 94720-1620,
+(510) 643-7201.
+
+Portions of this software are also subject to the BSD license from Kyoto University.
+See [LICENSE](LICENSE) for full terms and conditions.
 
 ## Authors
 
