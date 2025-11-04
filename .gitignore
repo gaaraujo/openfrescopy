@@ -1,0 +1,28 @@
+# Python build artifacts
+*.egg-info/
+*.egg
+# dist/ - Included for proof of concept (contains built wheels)
+build/
+*.pyc
+*.pyo
+__pycache__/
+*.so
+# Note: .pyd files in prebuilt/ should be kept, so we don't exclude *.pyd globally
+
+# Setuptools/pip generated files
+openfrescopy.egg-info/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Output files from examples
+*.out
+*.log

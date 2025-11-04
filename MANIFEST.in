@@ -1,0 +1,25 @@
+# Include all Python source files
+# Note: setuptools automatically includes files based on package-data
+# configuration in pyproject.toml, so we only need to specify extras here
+
+# Include examples
+recursive-include examples *.py
+recursive-include examples *.txt
+
+# Include documentation
+include README.md
+include LICENSE
+include COPYRIGHT_UCB
+
+# Exclude build-time files (these should not be in wheels)
+global-exclude setup.py
+global-exclude MANIFEST.in
+global-exclude prebuilt
+
+# Exclude output files
+global-exclude *.out
+global-exclude *.log
+global-exclude __pycache__
+global-exclude *.pyc
+global-exclude *.pyo
+
