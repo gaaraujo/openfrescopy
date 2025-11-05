@@ -5,20 +5,15 @@
 # This example performs a local hybrid simulation of a one bay frame with two
 # experimental twoNodeLink elements using the SimUniaxialMaterials controller.
 
-import sys
 import os
 from pathlib import Path
-
-# Set up paths for importing openfrescopy
-# Automatically detects if openfrescopy is installed; if not, adds package root to path
-# This allows the example to work both when installed as a package and when running from source
-this_folder = Path(__file__).parent.resolve()
 
 # Import OpenSees with OpenFrescoPy extension
 import openfrescopy.opensees as ops
 import math
 
 # Change to script directory for output files
+this_folder = Path(__file__).parent.resolve()
 os.chdir(this_folder)
 
 # ============================================================================
