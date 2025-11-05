@@ -66,17 +66,6 @@ ops.expElement("twoNodeLink", 1, 1, 3, "-dir", 2, "-site", 1,
                "-initStif", 2.8)
 ```
 
-The DLL path is automatically configured when importing
-`openfrescopy.opensees`, so no manual PATH setup is required.
-
-## Requirements
-
-- Python 3.10, 3.11, 3.12, 3.13, or 3.14 (compiled extensions are version-specific)
-- Windows (compiled extensions are Windows-specific)
-- OpenSeesPy (for OpenSees integration)
-
-**Note:** Use the wheel matching your Python version when installing. The package includes pre-built binaries for all supported Python versions.
-
 ## Examples
 
 See the `examples/` directory for working examples, including:
